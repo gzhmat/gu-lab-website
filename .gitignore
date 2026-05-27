@@ -1,0 +1,20 @@
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/
+
+# Editor junk
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# OneDrive / sync conflict files
+*conflict*
+*Conflict*
+
+# Local logs
+*.log

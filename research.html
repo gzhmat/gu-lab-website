@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gu Lab - Research</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <img src="images/Gu-lab-logo-small.png" alt="Gu Lab Logo" />
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="active"><a href="research.html">Research</a></li>
+          <li><a href="members.html">Members</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="join_us.html">Join Us</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Overarching Goal & Research Background -->
+    <section class="content-section">
+      <img src="images/cancer_genomics.jpg" alt="Cancer Genomics" class="research-image">
+      <h2>Overarching Goal</h2>
+      <p>
+        We aim to advance the understanding of the genetic and epigenetic alterations that drive the pathogenesis of different leukemias,
+        and develop faithful experimental models and novel diagnostic and therapeutic approaches.
+      </p>
+
+      <h2>Research Background</h2>
+      <p>Our research focuses on acute lymphoblastic leukemia (ALL), the most common pediatric cancer. 
+        ALL comprises dozens of distinct subtypes, each characterized by unique genetic alterations and gene expression profiles. 
+        Precise classification of these subtypes is critical for accurate prognosis and effective treatment strategy.
+      </p>
+      <p>In our recent work, we conducted an integrative genomic analysis of over 3,000 RNA-seq samples of B-cell ALL (B-ALL) and 
+        developed a molecular classification system based solely on bulk RNA-seq (Hu et al., 2024). 
+        This system enables automated classification of all known B-ALL subtypes and has been widely adopted in both basic research and clinical practice. 
+      </p>
+      <p>Beyond B-ALL classification, our lab has extensive expertise in <em>genomics and bioinformatics</em>. 
+        We develop computational tools powered by machine learning models to identify novel molecular markers of each B-ALL subtype, 
+        which further advances our understanding of leukemia genomics. Some of these tools are specifically designed for B-ALL, 
+        reflecting our in-depth knowledge of this highly aggressive disease. 
+        On the <em>experimental side</em>, we employ both in vitro and in vivo models to study how these molecular markers contribute to leukemia initiation, 
+        progression, and drug response. By dissecting the underlying mechanisms, we aim to develop and test novel therapeutic strategies that could lead to more effective treatments for high-risk B-ALL subtypes. 
+      </p>
+      <p>By integrating advanced computational analysis with biological validation, 
+        we aim to unravel the molecular complexities of B-ALL and drive the development of more precise diagnostic tools and targeted therapies. 
+      </p>
+
+      <section>
+        <h2>Research Support (Ongoing and completed)</h2>
+        <table style="width:100%; text-align:left;">
+          <tbody>
+            <tr>
+              <td>NIH/NCI, Research Project Grant (R01) (Pending; fundable)</td>
+              <td>Gu (PI)</td>
+              <td>07/01/2025 - 06/30/2030</td>
+            </tr>
+            <tr>
+              <td>NIH/NCI, Research Project Grant (R01) (Pending; fundable)</td>
+              <td>Gu (PI)</td>`
+              <td>04/01/2025 - 03/31/2030</td>
+            </tr>
+            <tr>
+              <td>Pediatric Cancer Research Foundation, Translational Research Grant</td>
+              <td>Gu (PI)</td>
+              <td>01/01/2024 - 12/31/2025</td>
+            </tr>
+            <tr>
+              <td>The V Foundation, V Scholar Award</td>
+              <td>Gu (PI)</td>
+              <td>09/01/2023 - 08/31/2026</td>
+            </tr>
+            <tr>
+              <td>Leukemia Research Foundation, New Investigator Grant</td>
+              <td>Gu (PI)</td>
+              <td>07/01/2023 - 06/30/2025</td>
+            </tr>
+            <tr>
+              <td>Andrew McDonough B+ Foundation, Childhood Cancer Research Grant</td>
+              <td>Gu (PI)</td>
+              <td>01/01/2023 - 12/31/2024</td>
+            </tr>
+            <tr>
+              <td>NIH/NCI, Pathway to Independence Award (K99/R00CA241297)</td>
+              <td>Gu (PI)</td>
+              <td>07/01/2019 - 06/30/2023</td>
+            </tr>
+            <tr>
+              <td>Leukemia & Lymphoma Society, Special Fellow Award</td>
+              <td>Gu (PI)</td>
+              <td>07/01/2018 - 12/31/2021</td>
+            </tr>
+            <tr>
+              <td>American Society of Hematology, Scholar Award</td>
+              <td>Gu (PI)</td>
+              <td>07/01/2018 - 06/30/2019</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      
+    </section>
+
+    <!-- Research Direction 1 -->
+    <section class="research-direction">
+      <h2>Direction 1: MD-ALL Platform & Fusion/SV Callers</h2>
+      <div class="figure-placeholder">
+        <!-- Placeholder for a figure -->
+        <img src="images/research/MD-ALL.png" alt="Figure for MD-ALL Platform" />
+      </div>
+      <p>The recent advancements in transcriptome sequencing (RNA-seq) have facilitated the discovery of novel B-ALL subtypes, which largely improves B-ALL classification and risk stratification. 
+        However, implementing these advances in research clinical settings remains challenging. 
+      </p>
+      <p>This study introduces MD-ALL (Molecular Diagnosis of ALL), an integrative computational platform designed to provide accurate and comprehensive B-ALL classification. 
+        Using machine learning models, MD-ALL identifies key feature genes and classifies B-ALL subtypes based on gene expression and genetic alterations. 
+        A critical advantage of MD-ALL is its ability to integrate multiple aspects of RNA-seq data, including sequence mutations, copy number variations (CNVs), 
+        and gene rearrangements, to achieve definitive classification. The platform demonstrated superior performance in a validation cohort of 974 samples, outperforming existing B-ALL classification tools. 
+      </p>
+      <p>
+        Since fusions and structural variations (SV) are the most common drivers in B-ALL, we are also developing highly sensitive 
+        and accurate fusion/SV callers based on RNA-seq data that are customized for B-ALL analysis.
+      </p>
+    </section>
+
+    <!-- Research Direction 2 -->
+    <section class="research-direction">
+      <h2>Direction 2: B-Cell Differentiation and BCR Development</h2>
+      <div class="figure-placeholder">
+        <img src="images/research/B-cell-stages.jpg" alt="Figure for B-cell Differentiation" />
+      </div>
+      <p>
+        B-ALL is caused by a blockage of B-cell differentiation. B cells originate from hematopoietic stem cells and progress 
+        through several stages to become mature B cells with a functional B cell receptor (BCR), which is composed of immunoglobulin heavy 
+        and light chains. Our study shows that different B-ALL subtypes correlate with different stages of B-cell differentiation and BCR development. 
+        This provides an opportunity to study the regulation of 3D structure of the IgH/IgL gene organization and the roles of key factors such as PAX5, WAPL, cohesin, CTCF, RAG1, RAG2, etc.
+      </p>
+    </section>
+
+    <!-- Research Direction 3 -->
+    <section class="research-direction">
+      <h2>Direction 3: PAX5alt and PAX5 P80R B-ALL Subtypes</h2>
+      <div class="figure-placeholder">
+        <img src="images/research/PAX5-P80R-stepwise-mutation.jpg" alt="Figure for PAX5 B-ALL Subtypes" />
+      </div>
+      <p>PAX5 mutations define two distinct B-ALL subtypes with markedly different clinical outcomes. 
+        However, the underlying mechanisms driving these differences remain largely unknown. 
+        To study the role of PAX5 mutations in B-ALL initiation and progression, we developed multiple genetically engineered knock-in mouse models. 
+        Using single-cell multi-omics analysis (scRNA-seq, scBCR-seq, and single-cell mutational profiling), we identified the stepwise mutagenesis and leukemogenesis process, 
+        from WT Pax5 allele deletion to the acquisition of secondary mutations (e.g., Jak mutations) leading to overt leukemia. 
+      </p>
+      <p>Furthermore, by leveraging our mouse models and patient-derived xenograft (PDX) samples, 
+        we uncovered the molecular mechanisms underlying the distinct clinical outcomes of B-ALL patients driven by different PAX5 mutations. 
+        These findings are expected to inform future precision medicine strategies for B-ALL patients with different PAX5 alterations, leading to more tailored and effective therapies. 
+      </p>
+        
+    </section>
+
+    <!-- Research Direction 4 -->
+    <section class="research-direction">
+      <h2>Direction 4: Driver Molecular Markers in High-Risk B-ALL</h2>
+      <div class="figure-placeholder">
+        <img src="images/research/A978.jpg" alt="Figure for A978 in High-Risk B-ALL" />
+      </div>
+      <p>Philadelphia chromosome-positive (Ph) and Ph-like B-cell acute lymphoblastic leukemia (B-ALL) are high-risk subtypes with very poor clinical outcomes. 
+        Through large-scale transcriptomic analysis, we identified A978 as the most significant RNA marker of Ph/Ph-like B-ALL. To investigate its role in leukemia initiation and progression, 
+        we employed multiple experimental approaches, including cell growth competition assay, scRNA-seq, Bio-ID (proximity labeling with mass spectrometry), dTAG fast degradation assay (to identify direct targets), 
+        CUT&RUN/CUT&Tag and 4C assays (to study A978 activation), transmission electron microscopy (TEM) and immuno-TEM to determine A978’s localization within cellular compartments (in mitochondria).
+      </p>
+      <p>For translational applications, we designed a CpG-conjugated small interfering RNA (CpG-siRNA) to specifically target A978 in Ph B-ALL. 
+        This strategy has been tested using both in vitro leukemia models and in vivo patient-derived xenograft (PDX) models, demonstrating significant therapeutic potential. 
+      </p>
+
+    </section>
+
+    <!-- Research Direction 5 -->
+    <section class="research-direction">
+      <h2>Direction 5: Novel Molecular Markers in B-ALL Subtypes</h2>
+      <div class="figure-placeholder">
+        <img src="images/research/otherRNA-alt.jpg" alt="Figure for Molecular Markers" />
+      </div>
+      <p>
+        B-ALL is a complex disease with multiple subtypes, each driven by different genetic and molecular changes. 
+        Studying RNA-based molecular markers helps not only in classifying these subtypes but also in understanding 
+        how they contribute to disease development, progression, drug response, and their potential as therapeutic targets.
+      </p>
+      <ul>
+        <li><strong>Long Noncoding RNA (lncRNA):</strong> lncRNAs are long RNA molecules that do not code for proteins but regulate gene expression. Some lncRNAs promote leukemia by altering cell signaling or blocking normal B-cell development.</li>
+    
+        <li><strong>Circular RNA (circRNA):</strong> circRNAs are stable, circular-shaped RNAs formed when an exon loops back on itself. They act as molecular sponges, trapping other RNAs or proteins to regulate gene activity.</li>
+    
+        <li><strong>Alternative Splicing:</strong> Alternative splicing allows a single gene to produce different protein versions by including or skipping certain RNA segments.</li>
+    
+        <li><strong>Alternative Polyadenylation (APA):</strong> APA controls how long the end of an mRNA molecule is, affecting how much protein gets made and how stable the RNA is. Changes in APA can alter gene expression, making leukemia cells more aggressive or resistant to drugs.</li>
+    </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <p>&copy; 2025 Gu Lab. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

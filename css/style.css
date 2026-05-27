@@ -1,0 +1,409 @@
+/* ------------------------------------
+   RESET & VARIABLES
+------------------------------------ */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	--dark-blue: #283747;      /* For header, footer, etc. */
+	--metallic-blue: #4e6785;  /* Accent color */
+	--light-blue: #dfe6ed;     /* Page background or highlight */
+	--white: #ffffff;
+	--max-width: 1200px;
+	--font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* ------------------------------------
+	 BODY
+------------------------------------ */
+body {
+	font-family: var(--font-family);
+	background: var(--light-blue);
+	color: var(--dark-blue);
+	line-height: 1.6;
+}
+
+/* A container with standard width & horizontal padding */
+.container {
+	width: 90%;
+	max-width: var(--max-width);
+	margin: auto;
+	padding: 1rem 0;
+}
+
+/* ------------------------------------
+	 HEADER
+------------------------------------ */
+.site-header {
+	background: var(--dark-blue);
+	color: var(--white);
+	padding: 1rem 0; /* top ribbon */
+}
+
+.header-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	/* Increase left & right space */
+	padding: 0 2rem;
+}
+
+.logo img {
+	max-width: 220px;
+	height: auto;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+}
+
+/* Slightly smaller margin between items so there's space on the right for 'Blog' */
+nav ul li {
+	margin-left: 1rem;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: var(--white);
+	font-weight: bold;
+	/* 25% bigger font */
+	font-size: 1.25rem;
+	padding: 0.5rem 0.8rem;
+	border-radius: 3px;
+	transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+	background: var(--metallic-blue);
+}
+
+nav ul li.active a {
+	background: var(--metallic-blue);
+}
+
+/* ------------------------------------
+	 SLIDER (Home Page)
+------------------------------------ */
+.slider {
+	position: relative;
+	width: 100%;
+	height: 70vh; /* 70% of viewport height */
+	overflow: hidden;
+	margin-bottom: 1rem;
+}
+
+.slides {
+	display: flex;
+	height: 100%;
+	/* JS handles continuous motion */
+}
+
+.slide {
+	min-width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.slide img {
+	display: block;
+	object-fit: contain;
+	max-height: 100%;
+	margin: auto;
+}
+
+/* Caption overlay at bottom of the slider */
+.slider-caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: rgba(46, 64, 83, 0.7);
+	color: var(--white);
+	text-align: center;
+	padding: 1rem 0.5rem;
+}
+
+.slider-caption h1 {
+	font-size: 2rem;
+	margin-bottom: 0.5rem;
+}
+
+.slider-caption p {
+	margin: 0.2rem 0;
+	font-size: 1.1rem;
+}
+
+/* ARROW CONTROLS - bigger & more obvious */
+.arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #fff;
+	font-size: 3rem;  /* bigger arrow */
+	cursor: pointer;
+	opacity: 0.7;
+	padding: 0.5rem;
+	z-index: 2; /* Above slides */
+	background: rgba(0,0,0,0.3); /* faint dark background */
+	border-radius: 5px;
+}
+.arrow:hover {
+	opacity: 1;
+}
+.arrow-left {
+	left: 10px;
+}
+.arrow-right {
+	right: 10px;
+}
+
+/* ------------------------------------
+	 MAIN CONTENT
+------------------------------------ */
+main.container {
+	margin-top: 1rem;
+}
+
+.mission,
+.content-section,
+.blog-section,
+.members-list {
+	background: var(--white);
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+	padding: 2rem;
+	margin-bottom: 2rem;
+}
+
+.mission h1,
+.mission h2,
+.content-section h2,
+.blog-section h2,
+.members-list h2 {
+	margin-bottom: 1rem;
+	font-size: 1.8rem;
+	color: var(--metallic-blue);
+}
+
+.mission p,
+.content-section p {
+    margin-bottom: 12px; /* Increases space between paragraphs */
+    line-height: 1.6; /* Optional: Improves readability */
+}
+.blog-section p,
+.members-list p {
+	font-size: 1.1rem;
+	color: var(--dark-blue);
+	text-align: justify;
+}
+
+/* For images on the research page, if any */
+.research-image {
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 1rem;
+}
+
+/* ------------------------------------
+	 BLOG
+------------------------------------ */
+.blog-post {
+	/* Horizontal line to separate each post */
+	border-bottom: 1px solid #cfd8dc;
+	padding-bottom: 1rem;
+	margin-bottom: 1.5rem;
+}
+
+.blog-post time {
+	display: block;
+	width: 100%;
+	background-color: #e8f1f8;  /* or your chosen color */
+	font-weight: bold;
+	color: #2c3e50;             /* easy-to-see color */
+	text-transform: uppercase;
+	padding: 0.6rem;
+	margin-bottom: 1rem;        /* space below the ribbon */
+}
+
+/* The rest of the blog layout */
+.post-row {
+	display: flex;
+	flex-wrap: wrap;
+}
+.figure {
+	margin-right: 1rem;
+}
+.figure img {
+	border: 1px solid #fff;
+	display: block;
+	width: 200px;
+	height: auto;
+}
+.article-text h3 {
+	margin-bottom: 0.5rem;
+	color: var(--metallic-blue);
+	font-size: 1.3rem;
+}
+.article-text p {
+	font-size: 1.1rem;
+	color: var(--dark-blue);
+	text-align: justify;
+}
+
+/* ------------------------------------
+	 MEMBERS
+------------------------------------ */
+.member {
+	/* Horizontal line to separate each member */
+	border-bottom: 1px solid #cfd8dc;
+	padding-bottom: 1rem;
+	margin-bottom: 2rem;
+}
+
+.member-layout {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	margin-top: 1rem;
+}
+
+.member-photo.oval {
+	width: 200px;
+	height: 260px; 
+	overflow: hidden;
+	border-radius: 50% / 35%; /* oval shape */
+	margin-right: 2rem;
+	margin-bottom: 1rem;
+	flex-shrink: 0;
+}
+
+.member-photo.oval img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.member-details h3 {
+	color: var(--metallic-blue);
+	margin-bottom: 0.5rem;
+	font-size: 1.3rem;
+}
+
+.member-details ul {
+	list-style: disc;
+	margin-left: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+/* Force alumni text left-aligned */
+.alumni-block p {
+	text-align: left !important;
+}
+
+/* ------------------------------------
+	 FOOTER
+------------------------------------ */
+.site-footer {
+	background: var(--dark-blue);
+	color: var(--white);
+	text-align: center;
+	padding: 1rem 0;
+}
+
+.footer-container {
+	display: flex;
+	justify-content: center;
+}
+
+/* ------------------------------------
+	 RESPONSIVE
+------------------------------------ */
+@media (max-width: 768px) {
+	.header-container {
+	  flex-direction: column;
+	  align-items: flex-start;
+	  padding: 0 1rem;
+	}
+  
+	nav ul {
+	  flex-direction: column;
+	  margin-top: 1rem;
+	}
+  
+	nav ul li {
+	  margin-left: 0;
+	  margin-bottom: 0.5rem;
+	}
+  
+	.slider {
+	  height: 50vh;
+	}
+  
+	.slider-caption h1 {
+	  font-size: 1.5rem;
+	}
+  
+	.logo img {
+	  max-width: 180px;
+	}
+  
+	.post-row {
+	  flex-direction: column;
+	}
+	.figure {
+	  margin-right: 0;
+	  margin-bottom: 1rem;
+	}
+  
+	.member-photo.oval {
+	  margin-right: 0;
+	  margin-bottom: 1rem;
+	}
+}
+
+/* ------------------------------------
+   RESEARCH DIRECTION SECTIONS
+------------------------------------ */
+.research-direction {
+  background: var(--white);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.research-direction h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: var(--metallic-blue);
+}
+
+.research-direction p {
+  font-size: 1.1rem;
+  color: var(--dark-blue);
+  text-align: justify;
+  margin-bottom: 12px; /* Increases space between paragraphs */
+  line-height: 1.6; /* Optional: Improves readability */
+}
+
+.research-direction ul {
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+/* ------------------------------------
+   FIGURE PLACEHOLDER STYLE
+------------------------------------ */
+.figure-placeholder {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.figure-placeholder img {
+  max-width: 100%;
+  height: auto;
+}
