@@ -23,6 +23,16 @@ $RECYCLE.BIN/
 # Claude Code local state
 .claude/
 
+# Project workflow & internal docs — keep LOCAL only, never publish to GitHub.
+# These are process/reference files, not part of the deployed website.
+PROJECT.md
+INDEX.md
+AGENTS.md
+CLAUDE.md
+LOG.md
+DECISIONS.md
+GIT-GUIDE.md
+
 # Node tooling (if added later)
 node_modules/
 npm-debug.log*
