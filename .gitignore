@@ -32,6 +32,7 @@ CLAUDE.md
 LOG.md
 DECISIONS.md
 GIT-GUIDE.md
+GIT-GUIDE.html
 
 # Node tooling (if added later)
 node_modules/
