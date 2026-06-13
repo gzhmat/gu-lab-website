@@ -2,17 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gu Lab - Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Gu Lab @ City of Hope</title>
+  <meta name="description" content="News and life from the Gu Lab — grants, publications, conferences, and the people who make the science happen." />
+  <link rel="icon" href="images/Gu-lab-logo-small.png" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <div class="bg-aurora"></div>
+  <canvas id="bg-particles"></canvas>
+  <div class="bg-grid"></div>
+  <div id="scroll-progress"></div>
+
   <header class="site-header">
     <div class="header-container">
-      <a href="index.html" class="logo">
+      <a href="index.html" class="logo" aria-label="Gu Lab home">
         <img src="images/Gu-lab-logo-small.png" alt="Gu Lab Logo" />
       </a>
-      <nav>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="primary-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="research.html">Research</a></li>
@@ -25,390 +35,261 @@
     </div>
   </header>
 
-  <!-- MAIN CONTENT -->
+  <section class="page-banner">
+    <div class="container">
+      <span class="eyebrow">Lab Journal</span>
+      <h1>News <span class="grad">&amp; lab life</span></h1>
+      <p>Grants, papers, conferences, and the moments in between.</p>
+    </div>
+  </section>
+
   <main class="container">
     <section class="blog-section">
+      <div class="timeline">
 
-      <!-- Aug. 19, 2025 -->
-      <article class="blog-post">
-        <time>Aug. 19, 2025</time>
-        <div class="post-row">
-          <div class="figure">
-            <img src="images/blog/2026.05.28.NIH_NCI.png" alt="NIH/NCI" width="200">
+        <article class="blog-post" data-reveal>
+          <time>Aug. 19, 2025</time>
+          <div class="post-row">
+            <div class="figure"><img src="images/blog/2026.05.28.NIH_NCI.png" alt="NIH/NCI" width="200" /></div>
+            <div class="article-text">
+              <h3>Our <em>PAX5</em> research is supported by an NIH/NCI R01 Award</h3>
+              <p>Just days after our first NIH/NCI award, the National Cancer Institute awarded the Gu Lab a second five-year grant (R01CA303874; 09/2025–08/2030) to dissect the functional role of <em>PAX5</em> mutations in B-cell acute lymphoblastic leukemia. This award supports our continued effort to understand how <em>PAX5</em> alterations drive multiple high-risk B-ALL subtypes and to identify therapeutic vulnerabilities downstream of these lesions. The grant was originally issued as a MERIT (R37) award and converted to an R01 per NIH policy; the science and scope remain unchanged. We are deeply grateful to our team, our collaborators, and the NCI.</p>
+            </div>
           </div>
-          <div class="article-text">
-            <h3>Our <em>PAX5</em> research is supported by an NIH/NCI R01 Award</h3>
-            <p>
-              We are excited to share that, just days after our first NIH/NCI award, the National Cancer Institute has
-              awarded the Gu Lab a second five-year grant (R01CA303874; 09/2025&ndash;08/2030) to dissect the functional role of
-              <em>PAX5</em> mutations in B-cell acute lymphoblastic leukemia. This award will support our continued effort to understand how <em>PAX5</em>
-              alterations drive multiple high-risk B-ALL subtypes and to identify therapeutic vulnerabilities downstream of these lesions.
-              The grant was originally issued as a MERIT (R37) award and was converted to an R01 in accordance with NIH policy;
-              the science and scope remain unchanged. We are deeply grateful to our team, our collaborators, and the NCI for this strong vote of confidence in our science.
-            </p>
-          </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- Aug. 15, 2025 -->
-      <article class="blog-post">
-        <time>Aug. 15, 2025</time>
-        <div class="post-row">
-          <div class="figure">
-            <img src="images/blog/2026.05.28.NIH_NCI.png" alt="NIH/NCI" width="200">
+        <article class="blog-post" data-reveal>
+          <time>Aug. 15, 2025</time>
+          <div class="post-row">
+            <div class="figure"><img src="images/blog/2026.05.28.NIH_NCI.png" alt="NIH/NCI" width="200" /></div>
+            <div class="article-text">
+              <h3>Our BCR::ABL1 (Ph) B-ALL research is supported by an NIH/NCI MERIT (R37) Award</h3>
+              <p>The National Cancer Institute awarded the Gu Lab its first NIH/NCI grant — a five-year MERIT Award (R37CA300358; 08/2025–07/2030) that will let us define how a novel signature gene shapes leukemogenesis and therapeutic response in BCR::ABL1 (Ph<sup>+</sup>) B-cell acute lymphoblastic leukemia. Many thanks to our team and the NCI for making this work possible.</p>
+            </div>
           </div>
-          <div class="article-text">
-            <h3>Our BCR::ABL1 (Ph) B-ALL research is supported by an NIH/NCI MERIT (R37) Award</h3>
-            <p>
-              We are thrilled to share that the National Cancer Institute has awarded the Gu Lab its first NIH/NCI grant &mdash;
-              a five-year MERIT Award (R37CA300358; 08/2025&ndash;07/2030) that will let us define how a novel signature gene
-              shapes leukemogenesis and therapeutic response in BCR::ABL1 (Ph<sup>+</sup>) B-cell acute lymphoblastic leukemia.
-              Many thanks to our team and the NCI for making this work possible.
-            </p>
-          </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- 1) Nov. 17, 2023 -->
-      <article class="blog-post">
-        <time>Nov. 17, 2023</time>
-        <div class="post-row">
-          <div class="figure">
-            <a href="https://pcrf-kids.org/pediatric-cancer-research/" target="_blank">
-              <img src="images/blog/2023.11.17.PCRF-grant.JPG" alt="PCRF Grant" width="200">
-            </a>
+        <article class="blog-post" data-reveal>
+          <time>Nov. 17, 2023</time>
+          <div class="post-row">
+            <div class="figure"><a href="https://pcrf-kids.org/pediatric-cancer-research/" target="_blank" rel="noopener"><img src="images/blog/2023.11.17.PCRF-grant.JPG" alt="PCRF Grant" width="200" /></a></div>
+            <div class="article-text">
+              <h3>Our single-cell research in high-risk leukemias is funded by the Pediatric Cancer Research Foundation</h3>
+              <p>Alongside Zunsong's recent publication, we received the Translational Research Grant from the Pediatric Cancer Research Foundation. Arriving just as the holidays approach, it feels like a special recognition of our efforts in studying high-risk acute lymphoblastic leukemia subtypes. We are incredibly grateful for this support as we continue to make meaningful strides in this field.</p>
+            </div>
           </div>
-          <div class="article-text">
-            <h3>Our single-cell research in high-risk leukemias is funded by the Pediatric Cancer Research Foundation</h3>
-            <p>
-              We are excited to announce that alongside Zunsong's recent publication, we have received the Translational Research Grant from the Pediatric Cancer Research Foundation.
-              This award, arriving just as the holidays approach, feels like a special recognition of our efforts in studying high-risk acute lymphoblastic leukemia subtypes.
-              It is a wonderful acknowledgment of our dedication to advancing leukemia research, and we are incredibly grateful for this support as we continue to make meaningful strides in this field.
-            </p>
-          </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- 2) Nov. 16, 2023 -->
-      <article class="blog-post">
-        <time>Nov. 16, 2023</time>
-        <div class="post-row">
-          <div class="figure">
-            <a href="https://pubmed.ncbi.nlm.nih.gov/37981856/" target="_blank">
-              <img src="images/blog/2023.11.16.Zunsong.PubJPG.JPG" alt="Zunsong Publication" width="200">
-            </a>
+        <article class="blog-post" data-reveal>
+          <time>Nov. 16, 2023</time>
+          <div class="post-row">
+            <div class="figure"><a href="https://pubmed.ncbi.nlm.nih.gov/37981856/" target="_blank" rel="noopener"><img src="images/blog/2023.11.16.Zunsong.PubJPG.JPG" alt="Zunsong Publication" width="200" /></a></div>
+            <div class="article-text">
+              <h3>Congratulations to Zunsong — two first-author papers published!</h3>
+              <p>Congratulations to Zunsong and our team for their remarkable work advancing leukemia research. Zunsong's contribution was instrumental in developing MD-ALL, a platform that combines various aspects of RNA-seq data for integrative leukemia classification. This work, including collaboration with Children's Hospital Los Angeles, demonstrated the platform's effectiveness in a clinical setting.</p>
+            </div>
           </div>
-          <div class="article-text">
-            <h3>Congratulations to Zunsong!!! Two first-author papers published!</h3>
-            <p>
-              Congratulations to Zunsong and our team members for their remarkable work in advancing leukemia research.
-              Zunsong's contribution has been instrumental in developing MD-ALL, a platform that combines various aspects of RNA-seq data for integrative leukemia classification.
-              This groundbreaking work, which included collaboration with Children's Hospital Los Angeles, demonstrated the platform's effectiveness in a clinical setting.
-            </p>
-          </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- 3) July 28, 2023 -->
-      <article class="blog-post">
-        <time>July 28, 2023</time>
-        <div class="post-row">
-          <div class="figure">
-            <a href="https://www.v.org/research-overview/" target="_blank">
-              <img src="images/blog/2023.07.28.V.jpg" alt="V Foundation" width="200">
-            </a>
+        <article class="blog-post" data-reveal>
+          <time>July 28, 2023</time>
+          <div class="post-row">
+            <div class="figure"><a href="https://www.v.org/research-overview/" target="_blank" rel="noopener"><img src="images/blog/2023.07.28.V.jpg" alt="V Foundation" width="200" /></a></div>
+            <div class="article-text">
+              <h3>Our PAX5 research in B-ALL is funded by the V Scholar Award from the V Foundation</h3>
+              <p>PAX5 is the key transcription factor in B-cell development and commitment. Over 30% of B-ALL patients are reported with PAX5 alterations. Rather than secondary events, PAX5 mutations can drive multiple B-ALL subtypes, many defined as high-risk. Thanks to the continuous efforts of our lab members, we have made significant strides in answering major questions about the molecular function of PAX5 mutations in driving leukemia development.</p>
+            </div>
           </div>
-          <div class="article-text">
-            <h3>Our PAX5 research in B-ALL is generously funded by the V Scholar Award from the V Foundation</h3>
-            <p>
-              PAX5 is the key transcription factor in B cell development and commitment.
-              Over 30% of B-ALL patients are reported with PAX5 alterations.
-              Rather than being secondary events in B-ALL, PAX5 mutations can drive multiple B-ALL subtypes, many of which are defined as high-risk.
-              Thanks to the continuous efforts from our lab members, we have made significant strides in answering major questions about the molecular function of PAX5 mutations in driving leukemia development.
-            </p>
-          </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- 4) June 23, 2023 -->
-      <article class="blog-post">
-        <time>June 23, 2023</time>
-        <div class="post-row">
-          <div class="figure">
-            <a href="https://leukemiarf.org/research/current-research/" target="_blank">
-              <img src="images/blog/2023.06.23.LRF.jpg" alt="Leukemia Research Foundation" width="200">
-            </a>
+        <article class="blog-post" data-reveal>
+          <time>June 23, 2023</time>
+          <div class="post-row">
+            <div class="figure"><a href="https://leukemiarf.org/research/current-research/" target="_blank" rel="noopener"><img src="images/blog/2023.06.23.LRF.jpg" alt="Leukemia Research Foundation" width="200" /></a></div>
+            <div class="article-text">
+              <h3>Our single-cell research in high-risk leukemias is funded by the Leukemia Research Foundation</h3>
+              <p>We are steadfast in our commitment to employ cutting-edge technologies and in vitro/in vivo models to understand the molecular mechanisms of high-risk acute lymphoblastic leukemia, particularly the PAX5alt and CRLF2-rearranged Ph-like subtypes. This approach is significantly advancing our understanding of these malignancies and their mechanisms of drug resistance. We deeply appreciate the support of the LRF.</p>
+            </div>
           </div>
-          <div class="article-text">
-            <h3>Our single-cell research in high-risk leukemias is funded by the Leukemia Research Foundation</h3>
-            <p>
-              We are steadfast in our commitment to employ cutting-edge technologies and in vitro/vivo experimental models to understand the molecular mechanisms of high-risk acute lymphoblastic leukemia,
-              particularly the PAX5alt and CRLF2-rearranged Ph-like subtypes.
-              This approach is significantly advancing our understanding of these malignancies and their mechanisms of drug resistance.
-              We deeply appreciate the support of the LRF, which has been instrumental in our research endeavors in this field.
-            </p>
-          </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- 5) April 14, 2023 -->
-      <article class="blog-post">
-        <time>April. 14, 2023</time>
-        <div class="post-row">
-          <div class="figure">
-            <a href="https://pubmed.ncbi.nlm.nih.gov/37090504/" target="_blank">
-              <img src="images/blog/2023.04.14.MD-ALL.jpg" alt="MD-ALL Preprint" width="200">
-            </a>
+        <article class="blog-post" data-reveal>
+          <time>April 14, 2023</time>
+          <div class="post-row">
+            <div class="figure"><a href="https://pubmed.ncbi.nlm.nih.gov/37090504/" target="_blank" rel="noopener"><img src="images/blog/2023.04.14.MD-ALL.jpg" alt="MD-ALL Preprint" width="200" /></a></div>
+            <div class="article-text">
+              <h3>Our MD-ALL platform is under review — here is the preprint</h3>
+              <p>Congratulations to Zunsong! This is the first fully independent research paper from our lab. Now there is an integrative RNA-seq analysis platform that can handle multiple aspects of information to assist B-ALL molecular classification. Many thanks to the hard work and innovative ideas from our team.</p>
+            </div>
           </div>
-          <div class="article-text">
-            <h3>Our MD-ALL platform is under review and here is the preprint</h3>
-            <p>
-              Congratulations to Zunsong! This is the first fully independent research paper from our lab.
-              Now, there is an integrative RNA-seq analysis platform that can handle multiple aspects of information to assist B-ALL molecular classification.
-              Many thanks to the hard work and innovative ideas from our team.
-            </p>
-          </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- 6) Dec. 12, 2022 -->
-      <article class="blog-post">
-        <time>Dec. 12, 2022</time>
-        <div class="post-row">
-          <div class="figure">
-            <a href="images/blog/2022.12.12.ASH.jpg" target="_blank">
-              <img src="images/blog/2022.12.12.ASH.jpg" alt="ASH 2022" width="200">
-            </a>
+        <article class="blog-post" data-reveal>
+          <time>Dec. 12, 2022</time>
+          <div class="post-row">
+            <div class="figure"><a href="images/blog/2022.12.12.ASH.jpg" target="_blank" rel="noopener"><img src="images/blog/2022.12.12.ASH.jpg" alt="ASH 2022" width="200" /></a></div>
+            <div class="article-text">
+              <h3>We had a great time at ASH 2022 in New Orleans</h3>
+              <p>Congratulations to Zunsong for his excellent poster presentation and to Zhilian for her outstanding oral presentations at ASH 2022. It was an exciting and proud experience for our lab to showcase our research on such a grand stage. Well done, Zunsong and Zhilian!</p>
+            </div>
           </div>
-          <div class="article-text">
-            <h3>We had a great time at ASH 2022 in New Orleans</h3>
-            <p>
-              Congratulations go to Zunsong for his excellent poster presentation and to Zhilian for her outstanding oral presentations at ASH 2022.
-              It was indeed an exciting and proud experience for our lab to be able to showcase our research on such a grand stage. Well done, Zunsong and Zhilian!
-            </p>
-          </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- 7) Nov. 30, 2022 -->
-      <article class="blog-post">
-        <time>Nov. 30, 2022</time>
-        <div class="post-row">
-          <div class="figure">
-            <a href="https://www.bepositive.org/research" target="_blank">
-              <img src="images/blog/2022.11.30.B+.png" alt="B+ Foundation" width="200">
-            </a>
+        <article class="blog-post" data-reveal>
+          <time>Nov. 30, 2022</time>
+          <div class="post-row">
+            <div class="figure"><a href="https://www.bepositive.org/research" target="_blank" rel="noopener"><img src="images/blog/2022.11.30.B+.png" alt="B+ Foundation" width="200" /></a></div>
+            <div class="article-text">
+              <h3>We received a grant from the Andrew McDonough B+ Foundation!</h3>
+              <p>The Childhood Cancer Research Award from the Andrew McDonough B+ Foundation will support our research into the function of PAX5 mutations in leukemia development. The B+ Foundation raises funds from events on college campuses, pairing some schools with research grants. Our application was well received, and we are honored to be paired with the students at Loyola Marymount University (LMU).</p>
+            </div>
           </div>
-          <div class="article-text">
-            <h3>We received grant from Andrew McDonough B+ Foundation!</h3>
-            <p>
-              The Childhood Cancer Research Award from Andrew McDonough B+ Foundation will support our research in understanding the function of PAX5 mutations in leukemia development.
-              The B+ Foundation raises a large amount of money from events on college campuses. To give the students a closer connection to the work that they make possible, they pair some of the schools with the research grants.
-              Our application was well-received, and we are honored to be paired with the students at Loyola Marymount University (LMU).
-            </p>
-          </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- 8) Oct. 25, 2022 -->
-      <article class="blog-post">
-        <time>Oct. 25, 2022</time>
-        <div class="post-row">
-          <div class="figure">
-            <a href="https://doi.org/10.3389/fonc.2022.1023606" target="_blank">
-              <img src="images/blog/2022.10.25.ZJ-paper.png" alt="First Gu Lab paper" width="200">
-            </a>
+        <article class="blog-post" data-reveal>
+          <time>Oct. 25, 2022</time>
+          <div class="post-row">
+            <div class="figure"><a href="https://doi.org/10.3389/fonc.2022.1023606" target="_blank" rel="noopener"><img src="images/blog/2022.10.25.ZJ-paper.png" alt="First Gu Lab paper" width="200" /></a></div>
+            <div class="article-text">
+              <h3>The first Gu Lab paper</h3>
+              <p>Congratulations to Dr. Zhilian Jia! The first Gu Lab paper is published in Frontiers in Oncology, Section of Hematologic Malignancies. In this review, we summarized recent advances in understanding the function of PAX5 in orchestrating the development of normal and malignant B cells, focusing on PAX5 alterations as initiating or driver events in B-ALL.</p>
+            </div>
           </div>
-          <div class="article-text">
-            <h3>The first Gu Lab paper</h3>
-            <p>
-              Congratulations to Dr. Zhilian Jia! The first Gu Lab paper is published in Frontiers in Oncology, Section of Hematologic Malignancies.
-              In this review paper, we summarized recent advances in understanding the function of PAX5 in orchestrating the development of both normal
-              and malignant B cells, with a focus on the PAX5 alterations as the initiating or driver events in B-ALL.
-            </p>
-          </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- 9) Aug. 6, 2022 -->
-      <article class="blog-post">
-        <time>Aug. 6, 2022</time>
-        <div class="post-row">
-          <div class="figure">
-            <a href="images/blog/2022.08.06.JoshuaTree.jpg" target="_blank">
-              <img src="images/blog/2022.08.06.JoshuaTree.jpg" alt="Joshua Tree" width="200">
-            </a>
+        <article class="blog-post" data-reveal>
+          <time>Aug. 6, 2022</time>
+          <div class="post-row">
+            <div class="figure"><a href="images/blog/2022.08.06.JoshuaTree.jpg" target="_blank" rel="noopener"><img src="images/blog/2022.08.06.JoshuaTree.jpg" alt="Joshua Tree" width="200" /></a></div>
+            <div class="article-text">
+              <h3>Joshua Tree National Park</h3>
+              <p>It was summer, and it was hot. Zunsong, Xiaohua, Zhilian, and Ke were there. A lonely brown table was settled for a hotpot dinner. "Oh look" cried Ke, and then the crystal dark night of the National Park was abruptly there. The end.</p>
+            </div>
           </div>
-          <div class="article-text">
-            <h3>Joshua Tree National Park</h3>
-            <p>
-              It was summer, and it was hot. Zunsong, Xiaohua, Zhilian, and Ke were there. A lonely brown table was settled for a hotpot dinner.
-              “Oh look” cried Ke, and then the crystal dark night of the National Park was abruptly there. The end.
-            </p>
-          </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- 10) Mar. 29, 2022 -->
-      <article class="blog-post">
-        <time>Mar. 29, 2022</time>
-        <div class="post-row">
-          <div class="figure">
-            <a href="https://www.nature.com/articles/s41375-022-01547-8" target="_blank">
-              <img src="images/blog/2022.03.29.RNAseqCNV.png" alt="RNAseqCNV" width="200">
-            </a>
+        <article class="blog-post" data-reveal>
+          <time>Mar. 29, 2022</time>
+          <div class="post-row">
+            <div class="figure"><a href="https://www.nature.com/articles/s41375-022-01547-8" target="_blank" rel="noopener"><img src="images/blog/2022.03.29.RNAseqCNV.png" alt="RNAseqCNV" width="200" /></a></div>
+            <div class="article-text">
+              <h3>RNAseqCNV is published</h3>
+              <p>Congratulations to Jan and Zunsong! The concept initiated in our previous work (Gu et al., Nat. Genet., 2019) of calling large-scale copy number alterations from bulk RNA-seq data is published in Leukemia. The software is freely available from <a href="https://github.com/honzee/RNAseqCNV" target="_blank" rel="noopener">GitHub RNAseqCNV</a>.</p>
+            </div>
           </div>
-          <div class="article-text">
-            <h3>RNAseqCNV is published</h3>
-            <p>
-              Congratulations to Jan and Zunsong! The concept initiated in our previous work (Gu et al., Nat. Genet., 2019) of calling large-scale copy number alterations from bulk RNA-seq data is published in Leukemia.
-              The software is freely available from <a href="https://github.com/honzee/RNAseqCNV" target="_blank">GitHub RNAseqCNV</a>.
-            </p>
-          </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- 11) Mar. 22, 2022 -->
-      <article class="blog-post">
-        <time>Mar. 22, 2022</time>
-        <div class="post-row">
-          <div class="figure">
-            <a href="images/blog/2022.03.22.rotationStudents.jpg" target="_blank">
-              <img src="images/blog/2022.03.22.rotationStudents.jpg" alt="Rotation Students" width="200">
-            </a>
+        <article class="blog-post" data-reveal>
+          <time>Mar. 22, 2022</time>
+          <div class="post-row">
+            <div class="figure"><a href="images/blog/2022.03.22.rotationStudents.jpg" target="_blank" rel="noopener"><img src="images/blog/2022.03.22.rotationStudents.jpg" alt="Rotation Students" width="200" /></a></div>
+            <div class="article-text">
+              <h3>Hiking</h3>
+              <p>A group hike to the Sunset Bench (5XFV+29 Monrovia, California). We were happy to host the rotation students Alex, Jiangyue, and Yu-Hsuan in our laboratory.</p>
+            </div>
           </div>
-          <div class="article-text">
-            <h3>Hiking</h3>
-            <p>
-              A group hiking to the Sunset Bench (5XFV+29 Monrovia, California). We were happy to host the rotation students Alex, Jiangyue, and Yu-Hsuan in our laboratory.
-            </p>
-          </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- 12) Dec. 13, 2021 -->
-      <article class="blog-post">
-        <time>Dec. 13, 2021</time>
-        <div class="post-row">
-          <div class="figure">
-            <a href="images/blog/2021.12.13.Christmas.jpg" target="_blank">
-              <img src="images/blog/2021.12.13.Christmas.jpg" alt="Christmas 2021" width="200">
-            </a>
+        <article class="blog-post" data-reveal>
+          <time>Dec. 13, 2021</time>
+          <div class="post-row">
+            <div class="figure"><a href="images/blog/2021.12.13.Christmas.jpg" target="_blank" rel="noopener"><img src="images/blog/2021.12.13.Christmas.jpg" alt="Christmas 2021" width="200" /></a></div>
+            <div class="article-text">
+              <h3>Merry Christmas to the team</h3>
+              <p>You may not be able to tell, but we were holding our breath while taking this photo, to comply with the COVID policy.</p>
+            </div>
           </div>
-          <div class="article-text">
-            <h3>Merry Christmas to the team</h3>
-            <p>
-              You may not be able to tell, but we were holding our breath while taking this photo, to comply with the COVID policy.
-            </p>
-          </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- 13) Nov. 27, 2021 -->
-      <article class="blog-post">
-        <time>Nov. 27, 2021</time>
-        <div class="post-row">
-          <div class="figure">
-            <a href="images/blog/2021.11.27.Thanksgiving_welcome.jpg" target="_blank">
-              <img src="images/blog/2021.11.27.Thanksgiving_welcome.jpg" alt="Thanksgiving Welcome" width="200">
-            </a>
+        <article class="blog-post" data-reveal>
+          <time>Nov. 27, 2021</time>
+          <div class="post-row">
+            <div class="figure"><a href="images/blog/2021.11.27.Thanksgiving_welcome.jpg" target="_blank" rel="noopener"><img src="images/blog/2021.11.27.Thanksgiving_welcome.jpg" alt="Thanksgiving Welcome" width="200" /></a></div>
+            <div class="article-text">
+              <h3>Happy Thanksgiving &amp; Welcome &amp; Congratulations</h3>
+              <p>Happy Thanksgiving to all our lab members! It was a great day in Lacy Park. Thanks to the Party Committee led by Helen and Zhilian — the table-runner and decorations were exquisite. We warmly welcomed our new lab member Dr. Ke Wang, celebrated Behzad's birthday, and were excited about the upcoming baby for Jibin.</p>
+            </div>
           </div>
-          <div class="article-text">
-            <h3>Happy Thanksgiving &amp; Welcome &amp; Congratulations</h3>
-            <p>
-              Happy Thanksgiving to all our lab members! It was a great day in the Lacy Park.
-              Thanks for the Party Committee led by Helen and Zhilian, the table-runner and decorations are exquisite.
-              We warmly welcomed our new lab member Dr. Ke Wang, celebrated Behzad's birthday with his significant one,
-              and we were very excited about the upcoming baby for Jibin.
-            </p>
-          </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- 14) Aug. 11, 2021 -->
-      <article class="blog-post">
-        <time>Aug. 11, 2021</time>
-        <div class="post-row">
-          <div class="figure">
-            <a href="images/blog/2021.08.11.Judd&Carrie.jpg" target="_blank">
-              <img src="images/blog/2021.08.11.Judd&Carrie.jpg" alt="Official Lab Photo" width="200">
-            </a>
+        <article class="blog-post" data-reveal>
+          <time>Aug. 11, 2021</time>
+          <div class="post-row">
+            <div class="figure"><a href="images/blog/2021.08.11.Judd&Carrie.jpg" target="_blank" rel="noopener"><img src="images/blog/2021.08.11.Judd&Carrie.jpg" alt="Official Lab Photo" width="200" /></a></div>
+            <div class="article-text">
+              <h3>An official lab photo</h3>
+              <p>An official lab photo was taken at the Biomedical Research Center, Monrovia, where our lab is located. We enjoyed the days that we had Judd, Carrie, and Elmah working with us this summer.</p>
+            </div>
           </div>
-          <div class="article-text">
-            <h3>An official lab photo</h3>
-            <p>
-              An official lab photo was taken at Biomedical Research Center, Monrovia, where our lab is located.
-              We enjoyed the days that we had Judd, Carrie, and Elmah working with us this summer.
-            </p>
-          </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- 15) Dec. 10, 2020 -->
-      <article class="blog-post">
-        <time>Dec. 10, 2020</time>
-        <div class="post-row">
-          <div class="figure">
-            <a href="images/blog/2020.12.10.1st-LabPhoto.jpg" target="_blank">
-              <img src="images/blog/2020.12.10.1st-LabPhoto.jpg" alt="First Lab Photo" width="200">
-            </a>
+        <article class="blog-post" data-reveal>
+          <time>Dec. 10, 2020</time>
+          <div class="post-row">
+            <div class="figure"><a href="images/blog/2020.12.10.1st-LabPhoto.jpg" target="_blank" rel="noopener"><img src="images/blog/2020.12.10.1st-LabPhoto.jpg" alt="First Lab Photo" width="200" /></a></div>
+            <div class="article-text">
+              <h3>Our first lab photo</h3>
+              <p>Surprise birthday party for Zhaohui. More importantly, we had our excellent first lab photo.</p>
+            </div>
           </div>
-          <div class="article-text">
-            <h3>Our first lab photo</h3>
-            <p>
-              Surprise birthday party for Zhaohui. More importantly, we had our excellent first lab photo.
-            </p>
-          </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- 16) Jan. 15, 2020 -->
-      <article class="blog-post">
-        <time>Jan. 15, 2020</time>
-        <div class="post-row">
-          <div class="figure">
-            <a href="#">
-              <img src="images/blog/2020.01.15.labWebpage.png" alt="Lab Webpage Online" width="200">
-            </a>
+        <article class="blog-post" data-reveal>
+          <time>Jan. 15, 2020</time>
+          <div class="post-row">
+            <div class="figure"><img src="images/blog/2020.01.15.labWebpage.png" alt="Lab Webpage Online" width="200" /></div>
+            <div class="article-text">
+              <h3>Lab webpage is online</h3>
+              <p>The first version of the Gu Lab website is online. For now the pages are mainly for recruiting lab members, but it will evolve into a hub to host and present our future research and lab life.</p>
+            </div>
           </div>
-          <div class="article-text">
-            <h3>Lab webpage is online</h3>
-            <p>
-              The first version of the Gu Lab website is online.
-              For now, the webpages are mainly for recruiting lab members, but it will evolve into a hub to host and present our future research
-              and lab life.
-            </p>
-          </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- 17) Jan. 10, 2020 -->
-      <article class="blog-post">
-        <time>Jan. 10, 2020</time>
-        <div class="post-row">
-          <div class="figure">
-            <a href="#">
-              <img src="images/blog/2020.01.10.GuLabCOH.jpg" alt="Gu Lab @ City of Hope" width="200">
-            </a>
+        <article class="blog-post" data-reveal>
+          <time>Jan. 10, 2020</time>
+          <div class="post-row">
+            <div class="figure"><img src="images/blog/2020.01.10.GuLabCOH.jpg" alt="Gu Lab @ City of Hope" width="200" /></div>
+            <div class="article-text">
+              <h3>Gu Lab @ City of Hope</h3>
+              <p>Today the official offer from City of Hope was accepted, announcing that the Gu Lab will kick-start on June 29th, 2020. Talented postdoc candidates are invited to embark on the inaugural of this brand new lab. Together, we can lead a productive, memorable, and enjoyable research life in beautiful Los Angeles!</p>
+            </div>
           </div>
-          <div class="article-text">
-            <h3>Gu Lab @ City of Hope</h3>
-            <p>
-              Today, the official offer from City of Hope is accepted, which announces that the Gu Lab will kick-start on June 29th, 2020.
-              Talented postdoc candidates are invited to embark on the inaugural of this brand new lab.
-              Together, we can lead a productive, memorable and enjoyable research life in beautiful Los Angeles!
-            </p>
-          </div>
-        </div>
-      </article>
+        </article>
 
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-container">
-      <p>&copy; 2025 Gu Lab. All Rights Reserved.</p>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/Gu-lab-logo-small.png" alt="Gu Lab Logo" />
+        <p>Department of Systems Biology, Beckman Research Institute, City of Hope — Los Angeles, California.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="members.html">Members</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="join_us.html">Join the lab</a></li>
+          <li><a href="mailto:zgu@coh.org">zgu@coh.org</a></li>
+          <li><a href="https://gu-lab.net">gu-lab.net</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year">2025</span> Gu Lab. All Rights Reserved.</span>
+      <span>Decoding leukemia, one genome at a time.</span>
     </div>
   </footer>
+
+  <script src="js/site.js" defer></script>
 </body>
 </html>

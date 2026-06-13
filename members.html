@@ -2,17 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gu Lab - Members</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Members — Gu Lab @ City of Hope</title>
+  <meta name="description" content="Meet the Gu Lab team: principal investigator Dr. Zhaohui Gu and the scientists, students, and staff decoding leukemia at City of Hope." />
+  <link rel="icon" href="images/Gu-lab-logo-small.png" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <div class="bg-aurora"></div>
+  <canvas id="bg-particles"></canvas>
+  <div class="bg-grid"></div>
+  <div id="scroll-progress"></div>
+
   <header class="site-header">
     <div class="header-container">
-      <a href="index.html" class="logo">
+      <a href="index.html" class="logo" aria-label="Gu Lab home">
         <img src="images/Gu-lab-logo-small.png" alt="Gu Lab Logo" />
       </a>
-      <nav>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="primary-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="research.html">Research</a></li>
@@ -25,189 +35,161 @@
     </div>
   </header>
 
+  <section class="page-banner">
+    <div class="container">
+      <span class="eyebrow">The Team</span>
+      <h1>The people <span class="grad">behind the science</span></h1>
+      <p>A multidisciplinary team of computational and experimental scientists, students, and staff.</p>
+    </div>
+  </section>
+
   <main class="container">
-    <section class="members-list">
-      <!-- Principal Investigator -->
-      <article class="member">
-        <h2>Principal Investigator</h2>
-        <div class="member-layout">
-          <div class="member-photo oval">
-            <img src="images/LabMember/ZhaohuiGu.jpg" alt="Zhaohui Gu">
-          </div>
-          <div class="member-details">
+    <section class="members-list" data-reveal>
+      <div class="member-tier-label">Principal Investigator</div>
+      <div class="member-grid">
+        <article class="card member-card pi" data-reveal>
+          <div class="member-photo"><img src="images/LabMember/ZhaohuiGu.jpg" alt="Zhaohui Gu" /></div>
+          <div class="member-body">
             <h3>Zhaohui Gu, Ph.D.</h3>
+            <div class="member-role">Principal Investigator · Associate Professor</div>
             <ul>
-              <li>2026-Present: Associate Professor, Beckman Research Institute, City of Hope</li>
-              <li>2020-2026: Assistant Professor, Beckman Research Institute, City of Hope</li>
-              <li>2015-2020: Postdoctoral Research Associate, St. Jude Children's Research Hospital</li>
-              <li>2008-2014: Ph.D. Student, Shanghai Jiao Tong University</li>
+              <li>2026–Present: Associate Professor, Beckman Research Institute, City of Hope</li>
+              <li>2020–2026: Assistant Professor, Beckman Research Institute, City of Hope</li>
+              <li>2015–2020: Postdoctoral Research Associate, St. Jude Children's Research Hospital</li>
+              <li>2008–2014: Ph.D. Student, Shanghai Jiao Tong University</li>
             </ul>
           </div>
-        </div>
-      </article>
+        </article>
+      </div>
 
-      <!-- Current Member: Zunsong Hu -->
-      <article class="member">
-        <h2>Current Member</h2>
-        <div class="member-layout">
-          <div class="member-photo oval">
-            <img src="images/LabMember/ZunsongHu.jpg" alt="Zunsong Hu">
-          </div>
-          <div class="member-details">
-            <h3>Zunsong Hu, Ph.D.</h3>
-            <ul>
-              <li>2024-Present: Staff Scientist, Beckman Research Institute, City of Hope</li>
-              <li>2020-2024: Postdoctoral Fellow, Beckman Research Institute, City of Hope</li>
-              <li>2018-2020: Postdoctoral Research Associate, University of Tennessee Health Science Center</li>
-              <li>2012-2017: Ph.D. Student, Peking Union Medical College</li>
-            </ul>
-          </div>
-        </div>
-      </article>
+      <div class="member-tier-label">Current Members</div>
+      <div class="member-grid">
+        <article class="card member-card" data-reveal data-delay="1">
+          <div class="member-photo"><img src="images/LabMember/ZunsongHu.jpg" alt="Zunsong Hu" /></div>
+          <h3>Zunsong Hu, Ph.D.</h3>
+          <div class="member-role">Staff Scientist</div>
+          <ul>
+            <li>2024–Present: Staff Scientist, City of Hope</li>
+            <li>2020–2024: Postdoctoral Fellow, City of Hope</li>
+            <li>2018–2020: Postdoctoral Research Associate, UTHSC</li>
+            <li>2012–2017: Ph.D., Peking Union Medical College</li>
+          </ul>
+        </article>
 
-      <!-- Current Member: Zhilian Jia -->
-      <article class="member">
-        <div class="member-layout">
-          <div class="member-photo oval">
-            <img src="images/LabMember/ZhilianJia.jpg" alt="Zhilian Jia">
-          </div>
-          <div class="member-details">
-            <h3>Zhilian Jia, Ph.D.</h3>
-            <ul>
-              <li>2022-Present: Staff Scientist, Beckman Research Institute, City of Hope</li>
-              <li>2020-2022: Postdoctoral Fellow, Beckman Research Institute, City of Hope</li>
-              <li>2017-2020: Assistant Professor, Shanghai Jiao Tong University</li>
-              <li>2015-2017: Postdoctoral Fellow, Shanghai Jiao Tong University</li>
-              <li>2009-2015: Ph.D. Student, Molecular Biology, Shanghai Jiao Tong University</li>
-            </ul>
-          </div>
-        </div>
-      </article>
+        <article class="card member-card" data-reveal data-delay="2">
+          <div class="member-photo"><img src="images/LabMember/ZhilianJia.jpg" alt="Zhilian Jia" /></div>
+          <h3>Zhilian Jia, Ph.D.</h3>
+          <div class="member-role">Staff Scientist</div>
+          <ul>
+            <li>2022–Present: Staff Scientist, City of Hope</li>
+            <li>2020–2022: Postdoctoral Fellow, City of Hope</li>
+            <li>2017–2020: Assistant Professor, Shanghai Jiao Tong University</li>
+            <li>2009–2015: Ph.D., Shanghai Jiao Tong University</li>
+          </ul>
+        </article>
 
-      <!-- Current Member: Alexander Chassiakos -->
-      <article class="member">
-        <div class="member-layout">
-          <div class="member-photo oval">
-            <img src="images/LabMember/AlexanderChassiakos.jpg" alt="Alexander Chassiakos">
-          </div>
-          <div class="member-details">
-            <h3>Alexander Chassiakos, B.S.</h3>
-            <ul>
-              <li>2021-Present: Ph.D. Student, Biological Sciences, City of Hope</li>
-              <li>2018: B.S., Microbiology, Immunology, and Molecular Genetics, UCLA</li>
-            </ul>
-          </div>
-        </div>
-      </article>
+        <article class="card member-card" data-reveal data-delay="3">
+          <div class="member-photo"><img src="images/LabMember/QingZhong.jpg" alt="Qing Zhong" /></div>
+          <h3>Qing Zhong, Ph.D.</h3>
+          <div class="member-role">Postdoctoral Fellow</div>
+          <ul>
+            <li>2025–Present: Postdoctoral Fellow, City of Hope</li>
+            <li>2020–2024: Joint Ph.D. in Biology, Fudan University</li>
+            <li>2016–2019: M.S. in Microbiology, Shandong University</li>
+            <li>2012–2016: B.S. in Biotechnology, Shandong University</li>
+          </ul>
+        </article>
 
-      <!-- Current Member: Xiaohua Huang -->
-      <article class="member">
-        <div class="member-layout">
-          <div class="member-photo oval">
-            <img src="images/LabMember/XiaohuaHuang.jpg" alt=" Xiaohua Huang">
-          </div>
-          <div class="member-details">
-            <h3> Xiaohua Huang, M.S.</h3>
-            <ul>
-              <li>2023-Present: Research Associate, Beckman Research Institute, City of Hope</li>
-              <li>2022-2023: Assistant to the General Manager, Vua Kho Bo, INC.</li>
-              <li>2015-2016: Structural Design & Overhaul Training, Voith Turbo GmbH & Co. KG, Heidenheim, Germany</li>
-              <li>2008-2010: Master of Science in Material Science & Technology, Harbin Institute of Technology, China</li>
-              <li>2004-2008: Bachelor of Science in Material Science & Technology, Harbin Institute of Technology, China</li>
-            </ul>
-          </div>
-        </div>
-      </article>
+        <article class="card member-card" data-reveal data-delay="1">
+          <div class="member-photo"><img src="images/LabMember/YiZhang.jpeg" alt="Yi Zhang" /></div>
+          <h3>Yi Zhang, Ph.D.</h3>
+          <div class="member-role">Postdoctoral Fellow</div>
+          <ul>
+            <li>2026–Present: Postdoctoral Fellow, Gu Lab, City of Hope</li>
+            <li>2021–2026: Postdoctoral Fellow, Yang Lab, City of Hope</li>
+            <li>2018–2021: Postdoctoral Fellow, Fudan University Cancer Institute</li>
+            <li>2013–2018: Ph.D., Chinese Academy of Sciences</li>
+          </ul>
+        </article>
 
-      <!-- Current Member: Qing Zhong -->
-      <article class="member">
-        <div class="member-layout">
-          <div class="member-photo oval">
-            <img src="images/LabMember/QingZhong.jpg" alt="Qing Zhong">
-          </div>
-          <div class="member-details">
-            <h3>Qing Zhong, Ph.D.</h3>
-            <ul>
-              <li>2025-Present: Postdoctoral Fellow, Beckman Research Institute, City of Hope</li>
-              <li>2020-2024: Joint Ph.D. in Biology, Fudan University, China</li>
-              <li>2016-2019: M.S. in Microbiology, Shandong University, Jinan, China</li>
-              <li>2012-2016: B.S. in Biotechnology, Shandong University, Weihai, China</li>
-            </ul>
-          </div>
-        </div>
-      </article>
+        <article class="card member-card" data-reveal data-delay="2">
+          <div class="member-photo"><img src="images/LabMember/AlexanderChassiakos.jpg" alt="Alexander Chassiakos" /></div>
+          <h3>Alexander Chassiakos, B.S.</h3>
+          <div class="member-role">Ph.D. Student</div>
+          <ul>
+            <li>2021–Present: Ph.D. Student, Biological Sciences, City of Hope</li>
+            <li>2018: B.S., MIMG, UCLA</li>
+          </ul>
+        </article>
 
-      <!-- Current Member: Dalmas Odhiambo -->
-      <article class="member">
-        <div class="member-layout">
-          <div class="member-photo oval">
-            <img src="images/LabMember/DalmasOdhiambo.jpeg" alt="Dalmas Odhiambo">
-          </div>
-          <div class="member-details">
-            <h3>Dalmas Odhiambo, B.S.</h3>
-            <ul>
-              <li>2025-Present: Ph.D. Student, Gu Lab, Beckman Research Institute, City of Hope</li>
-              <li>2022-2025: Ph.D. Student, Lili Wang Lab, Beckman Research Institute, City of Hope</li>
-              <li>2013-2017: B.Sc. in Microbiology, Kenyatta University, Nairobi, Kenya</li>
-            </ul>
-          </div>
-        </div>
-      </article>
+        <article class="card member-card" data-reveal data-delay="3">
+          <div class="member-photo"><img src="images/LabMember/DalmasOdhiambo.jpeg" alt="Dalmas Odhiambo" /></div>
+          <h3>Dalmas Odhiambo, B.S.</h3>
+          <div class="member-role">Ph.D. Student</div>
+          <ul>
+            <li>2025–Present: Ph.D. Student, Gu Lab, City of Hope</li>
+            <li>2022–2025: Ph.D. Student, Lili Wang Lab, City of Hope</li>
+            <li>2013–2017: B.Sc. in Microbiology, Kenyatta University</li>
+          </ul>
+        </article>
 
-      <!-- Current Member: Yi Zhang -->
-      <article class="member">
-        <div class="member-layout">
-          <div class="member-photo oval">
-            <img src="images/LabMember/YiZhang.jpeg" alt="Yi Zhang">
-          </div>
-          <div class="member-details">
-            <h3>Yi Zhang, Ph.D.</h3>
-            <ul>
-              <li>2026-Present: Postdoctoral Fellow, Beckman Research Institute, City of Hope</li>
-              <li>2021-2026: Postdoctoral Fellow, Yanzhong Yang Lab, Beckman Research Institute, City of Hope</li>
-              <li>2018-2021: Postdoctoral Fellow, Fudan University Cancer Institute, Shanghai, China</li>
-              <li>2013-2018: Ph.D. in Molecular Biology, Center for Excellence in Molecular Plant Sciences, Chinese Academy of Sciences, Shanghai, China</li>
-              <li>2010-2013: M.Sc. in Molecular Biology, Shanghai Normal University, Shanghai, China</li>
-              <li>2005-2009: B.Sc. in Biology, Xinyang Normal University, Henan, China</li>
-            </ul>
-          </div>
-        </div>
-      </article>
+        <article class="card member-card" data-reveal data-delay="1">
+          <div class="member-photo"><img src="images/LabMember/XiaohuaHuang.jpg" alt="Xiaohua Huang" /></div>
+          <h3>Xiaohua Huang, M.S.</h3>
+          <div class="member-role">Research Associate</div>
+          <ul>
+            <li>2023–Present: Research Associate, City of Hope</li>
+            <li>2015–2016: Structural Design Training, Voith Turbo GmbH, Germany</li>
+            <li>2008–2010: M.S., Materials Science, Harbin Institute of Technology</li>
+            <li>2004–2008: B.S., Materials Science, Harbin Institute of Technology</li>
+          </ul>
+        </article>
+      </div>
 
-
-
-
-
-
-
-
-
-
-
-
-      <!-- Alumni -->
-      <article class="member">
-        <h2>Alumni</h2>
-        <p class="alumni-hint">Click a name to view full profile.</p>
-        <div class="alumni-block">
-          <p>
-            <strong><a href="alumni/ming-zhan.html">Ming Zhan, Ph.D.</a></strong><br>
-            <strong><a href="alumni/xiying-guo.html">Xiying Guo, M.D., Ph.D.</a></strong><br>
-            <strong><a href="alumni/yanan-zhu.html">Yanan Zhu, M.D., Ph.D.</a></strong><br>
-            <strong><a href="alumni/than-than-han.html">Than Than Han (Helen), B.S.</a></strong><br>
-            <strong><a href="alumni/judd-collado.html">Judd Collado, B.S.</a></strong><br>
-            <strong><a href="alumni/behzad-damirchi.html">Behzad Damirchi, Ph.D.</a></strong><br>
-            <strong><a href="alumni/ke-wang.html">Ke Wang, Ph.D.</a></strong>
-          </p>
-        </div>
-      </article>
+      <div class="member-tier-label">Alumni</div>
+      <p class="alumni-hint">Click a name to view the full profile.</p>
+      <div class="alumni-grid">
+        <a href="alumni/ming-zhan.html">Ming Zhan, Ph.D.</a>
+        <a href="alumni/xiying-guo.html">Xiying Guo, M.D., Ph.D.</a>
+        <a href="alumni/yanan-zhu.html">Yanan Zhu, M.D., Ph.D.</a>
+        <a href="alumni/than-than-han.html">Than Than Han (Helen), B.S., M.S.</a>
+        <a href="alumni/judd-collado.html">Judd Collado, B.S.</a>
+        <a href="alumni/behzad-damirchi.html">Behzad Damirchi, Ph.D.</a>
+        <a href="alumni/ke-wang.html">Ke Wang, Ph.D.</a>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-container">
-      <p>&copy; 2025 Gu Lab. All Rights Reserved.</p>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/Gu-lab-logo-small.png" alt="Gu Lab Logo" />
+        <p>Department of Systems Biology, Beckman Research Institute, City of Hope — Los Angeles, California.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="members.html">Members</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="join_us.html">Join the lab</a></li>
+          <li><a href="mailto:zgu@coh.org">zgu@coh.org</a></li>
+          <li><a href="https://gu-lab.net">gu-lab.net</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year">2025</span> Gu Lab. All Rights Reserved.</span>
+      <span>Decoding leukemia, one genome at a time.</span>
     </div>
   </footer>
+
+  <script src="js/site.js" defer></script>
 </body>
 </html>

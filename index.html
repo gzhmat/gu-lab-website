@@ -2,18 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gu Lab - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gu Lab @ City of Hope — Decoding Leukemia</title>
+  <meta name="description" content="The Gu Lab at City of Hope develops experimental models and computational methods to decode acute lymphoblastic leukemia — from RNA-seq classification to PAX5 biology and targeted therapy." />
+  <link rel="icon" href="images/Gu-lab-logo-small.png" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <div class="bg-aurora"></div>
+  <canvas id="bg-particles"></canvas>
+  <div class="bg-grid"></div>
+  <div id="scroll-progress"></div>
+
   <!-- HEADER -->
   <header class="site-header">
     <div class="header-container">
-      <a href="index.html" class="logo">
+      <a href="index.html" class="logo" aria-label="Gu Lab home">
         <img src="images/Gu-lab-logo-small.png" alt="Gu Lab Logo" />
       </a>
-      <nav>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="primary-nav">
         <ul>
           <li class="active"><a href="index.html">Home</a></li>
           <li><a href="research.html">Research</a></li>
@@ -26,121 +36,236 @@
     </div>
   </header>
 
-  <!-- SLIDER -->
-  <!-- 5 slides. The JS code will handle continuous left scroll, jumping back to the start after the last slide. -->
-  <div class="slider">
-    <div class="slides">
-      <!-- Original 5 slides -->
-      <div class="slide"><img src="images/Home1.jpg" alt="Home Slide 1"></div>
-      <div class="slide"><img src="images/Home2.jpg" alt="Home Slide 2"></div>
-      <div class="slide"><img src="images/Home3.jpg" alt="Home Slide 3"></div>
-      <div class="slide"><img src="images/Home4.jpg" alt="Home Slide 4"></div>
-      <div class="slide"><img src="images/Home5.jpg" alt="Home Slide 5"></div>
-
-      <!-- Duplicate the same 5 for a seamless loop -->
-      <div class="slide"><img src="images/Home1.jpg" alt="Home Slide 1"></div>
-      <div class="slide"><img src="images/Home2.jpg" alt="Home Slide 2"></div>
-      <div class="slide"><img src="images/Home3.jpg" alt="Home Slide 3"></div>
-      <div class="slide"><img src="images/Home4.jpg" alt="Home Slide 4"></div>
-      <div class="slide"><img src="images/Home5.jpg" alt="Home Slide 5"></div>
+  <!-- HERO -->
+  <section class="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <span class="hero-badge"><span class="dot"></span> Beckman Research Institute · City of Hope</span>
+        <h1>Decoding the genome of <span class="grad">leukemia</span></h1>
+        <p class="hero-lead">
+          The Gu Lab fuses cutting-edge experimental models with computational methods to
+          understand, classify, and target hematologic malignancies.
+        </p>
+        <div class="hero-cta">
+          <a href="research.html" class="btn btn-primary" data-magnetic>Explore our research <span class="arrow">→</span></a>
+          <a href="join_us.html" class="btn btn-ghost" data-magnetic>Join the lab</a>
+        </div>
+      </div>
     </div>
-
-    <div class="slider-caption">
-      <h1>Welcome to the Gu Lab @ City of Hope</h1>
-      <p>If you want to go fast, go alone. If you want to go far, go together.</p>
-      <p class="quote">-- African Proverb</p>
+    <div class="scroll-cue">
+      <div class="mouse"></div>
+      Scroll
     </div>
+  </section>
 
-    <!-- Larger, more obvious arrow controls -->
-    <div class="arrow arrow-left">&#10094;</div>
-    <div class="arrow arrow-right">&#10095;</div>
-  </div>
+  <!-- STATS -->
+  <section class="section" style="padding-top: clamp(3rem,6vw,5rem)">
+    <div class="container">
+      <div class="stats">
+        <div class="stat" data-reveal data-delay="1">
+          <div class="num"><span data-count="2020">2020</span></div>
+          <div class="label">Lab founded at City&nbsp;of&nbsp;Hope</div>
+        </div>
+        <div class="stat" data-reveal data-delay="2">
+          <div class="num"><span data-count="5">5</span></div>
+          <div class="label">Major research directions</div>
+        </div>
+        <div class="stat" data-reveal data-delay="3">
+          <div class="num"><span data-count="9" data-suffix="+">9+</span></div>
+          <div class="label">Grants awarded</div>
+        </div>
+        <div class="stat" data-reveal data-delay="4">
+          <div class="num"><span data-count="3000" data-suffix="+">3000+</span></div>
+          <div class="label">B-ALL transcriptomes analyzed</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- MAIN CONTENT -->
-  <main class="container">
-    <section class="mission">
-      <h1>Mission and Vision</h1>
-      <p>
-        The Gu Lab is devoted to developing cutting-edge experimental models and computational methods to
-        advance our understanding of various hematologic malignancies.
-        Our research is centered on leukemia diagnosis, classification, identification of driver genetic lesions,
-        functional assays of leukemogenesis, and the development of targeted therapies.
-      </p>
-    </section>
-  </main>
+  <!-- MISSION -->
+  <section class="section" id="mission">
+    <div class="container">
+      <div class="split">
+        <div data-reveal="left">
+          <span class="eyebrow">Mission &amp; Vision</span>
+          <h2 class="section-title">Faithful models. <span class="grad">Precise diagnosis.</span> Better therapies.</h2>
+          <p class="section-sub" style="margin-bottom:1.2rem">
+            We are devoted to developing cutting-edge experimental models and computational
+            methods that advance the understanding of hematologic malignancies.
+          </p>
+          <p style="color:var(--text)">
+            Our research centers on leukemia diagnosis and classification, the identification of
+            driver genetic lesions, functional assays of leukemogenesis, and the development of
+            targeted therapies — bridging the dry lab and the wet lab to turn genomic insight into
+            clinical impact.
+          </p>
+          <a href="research.html" class="btn btn-ghost" data-magnetic style="margin-top:1.6rem">See how we work <span class="arrow">→</span></a>
+        </div>
+        <div class="card" data-reveal="right" data-tilt style="padding:2rem">
+          <span class="eyebrow">Focus disease</span>
+          <h3 style="font-size:1.5rem;color:var(--ink);margin-bottom:.6rem">B-cell acute lymphoblastic leukemia</h3>
+          <p style="color:var(--text);font-size:.98rem">
+            B-ALL is the most common pediatric cancer, comprising dozens of molecular subtypes —
+            each defined by unique genetic alterations and expression programs. Precise
+            classification is the foundation of accurate prognosis and effective treatment.
+          </p>
+          <div class="tag-row" style="margin-top:1.4rem;display:flex;flex-wrap:wrap;gap:.4rem">
+            <span class="tag">Genomics</span>
+            <span class="tag">Bioinformatics</span>
+            <span class="tag">Machine learning</span>
+            <span class="tag">Mouse models</span>
+            <span class="tag">Single-cell</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH PREVIEW -->
+  <section class="section" id="research">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Research Directions</span>
+        <h2 class="section-title">Five fronts on <span class="grad">high-risk leukemia</span></h2>
+        <p class="section-sub">From computational platforms to mechanism and therapy.</p>
+      </div>
+      <div class="grid grid-3">
+        <a class="card dir-card" href="research.html" data-reveal data-delay="1" data-tilt>
+          <div class="dir-index">01 / PLATFORM</div>
+          <h3>MD-ALL &amp; fusion/SV callers</h3>
+          <p>An integrative platform that classifies all known B-ALL subtypes from bulk RNA-seq, plus sensitive callers customized for B-ALL fusions and structural variants.</p>
+          <div class="tag-row"><span class="tag">RNA-seq</span><span class="tag">ML classifier</span></div>
+        </a>
+        <a class="card dir-card" href="research.html" data-reveal data-delay="2" data-tilt>
+          <div class="dir-index">02 / DEVELOPMENT</div>
+          <h3>B-cell differentiation &amp; BCR</h3>
+          <p>How B-ALL subtypes map onto stages of B-cell development and the 3D organization of the IgH/IgL loci, through PAX5, cohesin, CTCF, RAG1/2 and more.</p>
+          <div class="tag-row"><span class="tag">3D genome</span><span class="tag">BCR</span></div>
+        </a>
+        <a class="card dir-card" href="research.html" data-reveal data-delay="3" data-tilt>
+          <div class="dir-index">03 / MECHANISM</div>
+          <h3>PAX5alt &amp; PAX5 P80R</h3>
+          <p>Knock-in mouse models and single-cell multi-omics reveal the stepwise mutagenesis that turns PAX5 lesions into overt leukemia with distinct clinical outcomes.</p>
+          <div class="tag-row"><span class="tag">Knock-in mice</span><span class="tag">scMulti-omics</span></div>
+        </a>
+        <a class="card dir-card" href="research.html" data-reveal data-delay="1" data-tilt>
+          <div class="dir-index">04 / THERAPY</div>
+          <h3>Drivers in high-risk B-ALL</h3>
+          <p>A978 is the top RNA marker of Ph/Ph-like B-ALL. We dissect its biology and test a CpG-conjugated siRNA therapy in PDX models.</p>
+          <div class="tag-row"><span class="tag">Ph / Ph-like</span><span class="tag">CpG-siRNA</span></div>
+        </a>
+        <a class="card dir-card" href="research.html" data-reveal data-delay="2" data-tilt>
+          <div class="dir-index">05 / DISCOVERY</div>
+          <h3>Novel molecular markers</h3>
+          <p>lncRNA, circRNA, alternative splicing and polyadenylation as subtype markers — and as windows into disease progression, drug response and new targets.</p>
+          <div class="tag-row"><span class="tag">lncRNA</span><span class="tag">circRNA</span><span class="tag">APA</span></div>
+        </a>
+        <a class="card dir-card" href="research.html" data-reveal data-delay="3" data-tilt style="background:linear-gradient(135deg,rgba(13,148,136,.12),rgba(37,99,235,.10));align-items:flex-start;justify-content:center">
+          <div class="dir-index">→ ALL DIRECTIONS</div>
+          <h3>Dive into the science</h3>
+          <p>Read the full research overview, funding, and figures.</p>
+          <span class="btn btn-ghost" style="margin-top:1.2rem" data-magnetic>Open research <span class="arrow">→</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LATEST NEWS -->
+  <section class="section" id="news">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Latest News</span>
+        <h2 class="section-title">Recent <span class="grad">milestones</span></h2>
+      </div>
+      <div class="grid grid-3">
+        <article class="card dir-card" data-reveal data-delay="1" data-tilt>
+          <div class="dir-index">AUG 2025</div>
+          <h3>A second NIH/NCI R01</h3>
+          <p>The NCI awarded the lab a five-year R01 (R01CA303874) to dissect the functional role of PAX5 mutations in B-ALL.</p>
+        </article>
+        <article class="card dir-card" data-reveal data-delay="2" data-tilt>
+          <div class="dir-index">AUG 2025</div>
+          <h3>NIH/NCI MERIT (R37) Award</h3>
+          <p>A five-year MERIT award (R37CA300358) supports our work on a novel signature gene in BCR::ABL1 (Ph⁺) B-ALL.</p>
+        </article>
+        <article class="card dir-card" data-reveal data-delay="3" data-tilt>
+          <div class="dir-index">PUBLISHED</div>
+          <h3>MD-ALL in Haematologica</h3>
+          <p>Our integrative platform for molecular diagnosis of B-ALL, validated across 974 samples, outperforms existing tools.</p>
+        </article>
+      </div>
+      <div style="text-align:center;margin-top:2.5rem">
+        <a href="blog.html" class="btn btn-ghost" data-magnetic>Read the lab blog <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUNDERS -->
+  <section class="section" style="padding-block:clamp(2.5rem,5vw,4rem)">
+    <div class="container">
+      <div class="section-head center" style="margin-bottom:2rem">
+        <span class="eyebrow">Supported by</span>
+      </div>
+      <div class="funder-list" data-reveal>
+        <span class="funder">NIH / NCI</span>
+        <span class="funder">The V Foundation</span>
+        <span class="funder">Pediatric Cancer Research Foundation</span>
+        <span class="funder">Leukemia Research Foundation</span>
+        <span class="funder">Andrew McDonough B+ Foundation</span>
+        <span class="funder">Leukemia &amp; Lymphoma Society</span>
+        <span class="funder">American Society of Hematology</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner" data-reveal="scale">
+        <span class="eyebrow" style="justify-content:center">Join Us</span>
+        <h2>Join us to decode leukemia</h2>
+        <p>We are recruiting postdocs, visiting scholars, and graduate students in computational and cancer biology at a top-ranked cancer center in the Los Angeles area.</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+          <a href="join_us.html" class="btn btn-primary" data-magnetic>Open positions <span class="arrow">→</span></a>
+          <a href="mailto:zgu@coh.org" class="btn btn-ghost" data-magnetic>Email Dr. Gu</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="container footer-container">
-      <p>&copy; 2025 Gu Lab. All Rights Reserved.</p>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/Gu-lab-logo-small.png" alt="Gu Lab Logo" />
+        <p>Department of Systems Biology, Beckman Research Institute, City of Hope — Los Angeles, California.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="members.html">Members</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="join_us.html">Join the lab</a></li>
+          <li><a href="mailto:zgu@coh.org">zgu@coh.org</a></li>
+          <li><a href="https://gu-lab.net">gu-lab.net</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year">2025</span> Gu Lab. All Rights Reserved.</span>
+      <span>Decoding leukemia, one genome at a time.</span>
     </div>
   </footer>
 
-  <!-- CONTINUOUS SLIDER + ARROW SCRIPT -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const slidesEl = document.querySelector(".slides");
-      const slideCount = 5; // unique slides
-      let currentIndex = 0;
-      let autoSlideInterval = null;
-
-      function startAutoSlide() {
-        autoSlideInterval = setInterval(() => {
-          goToNextSlide();
-        }, 5000);
-      }
-
-      function goToNextSlide() {
-        currentIndex++;
-        slidesEl.style.transition = "transform 1s ease-in-out";
-        slidesEl.style.transform = `translateX(-${currentIndex * 100}%)`;
-
-        // If we reach the 6th slide (index=5 is last unique),
-        // jump back to index=0 after transition
-        if (currentIndex === slideCount) {
-          setTimeout(() => {
-            slidesEl.style.transition = "none";
-            slidesEl.style.transform = "translateX(0%)";
-            currentIndex = 0;
-          }, 1000);
-        }
-      }
-
-      function goToPrevSlide() {
-        currentIndex--;
-        if (currentIndex < 0) {
-          // Jump to last slide
-          currentIndex = slideCount - 1;
-          slidesEl.style.transition = "none";
-          slidesEl.style.transform = `translateX(-${currentIndex * 100}%)`;
-          // Force reflow, then animate again
-          setTimeout(() => {
-            slidesEl.style.transition = "transform 1s ease-in-out";
-          }, 20);
-        } else {
-          slidesEl.style.transition = "transform 1s ease-in-out";
-          slidesEl.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }
-      }
-
-      const arrowLeft = document.querySelector(".arrow-left");
-      const arrowRight = document.querySelector(".arrow-right");
-
-      arrowLeft.addEventListener("click", () => {
-        clearInterval(autoSlideInterval);
-        goToPrevSlide();
-        startAutoSlide();
-      });
-
-      arrowRight.addEventListener("click", () => {
-        clearInterval(autoSlideInterval);
-        goToNextSlide();
-        startAutoSlide();
-      });
-
-      // Start auto-slide
-      startAutoSlide();
-    });
-  </script>
+  <script src="js/site.js" defer></script>
+  <script src="js/hero.js" defer></script>
 </body>
 </html>

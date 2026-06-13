@@ -2,17 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gu Lab - Join Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join Us — Gu Lab @ City of Hope</title>
+  <meta name="description" content="Open positions in the Gu Lab: postdoctoral fellows, visiting scholars, and graduate students in computational and cancer biology at City of Hope." />
+  <link rel="icon" href="images/Gu-lab-logo-small.png" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <div class="bg-aurora"></div>
+  <canvas id="bg-particles"></canvas>
+  <div class="bg-grid"></div>
+  <div id="scroll-progress"></div>
+
   <header class="site-header">
     <div class="header-container">
-      <a href="index.html" class="logo">
+      <a href="index.html" class="logo" aria-label="Gu Lab home">
         <img src="images/Gu-lab-logo-small.png" alt="Gu Lab Logo" />
       </a>
-      <nav>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="primary-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="research.html">Research</a></li>
@@ -25,95 +35,118 @@
     </div>
   </header>
 
-  <!-- main class="container">
-    <section class="content-section">
-      <h2>Job Openings</h2>
-      <p>
-        The Gu research laboratory is actively recruiting postdocs who are eager to pursue groundbreaking biomedical research in computational and cancer biology. Our lab is in the Department of Computational and Quantitative Medicine (primary) and Systems Biology (joint) at City of Hope National Medical Center, located in the Los Angeles area. Our goal is to do the best science, while training the next generation of scientific leaders.
-      </p>
-
-      <h2>Candidate Qualifications</h2>
-      <p>
-        Ideal applicants hold a PhD (or equivalent) in Bioinformatics, Computer Science, Statistics, Hematology, Cell/Molecular/Developmental Biology, Immunology, or other quantitative and/or biomedical science. Prior experience in cancer genomics, bioinformatics analysis, molecular mechanism study, or mouse modeling is highly valued. Responsibilities include <em>in vitro</em> and <em>in vivo</em> modeling, computational methodology development, big-data analysis, manuscript writing, and more.
-      </p>
-
-      <h2>To Apply</h2>
-      <p>
-        Please submit a CV, a cover letter describing your background and research interests, and contact information for at least three references to Dr. Gu 
-        (<a href="mailto:zgu@coh.org">zgu@coh.org</a> and <a href="mailto:gzhmat@gmail.com">gzhmat@gmail.com</a>).
-      </p>
-
-      <h2>What We Offer</h2>
-      <p>
-        Our lab fosters both dry- and wet-lab trainees to develop strong expertise and a productive track record. We have generous funding, powerful computing resources, and access to abundant patient samples. City of Hope is a designated Comprehensive Cancer Center by the NCI and a founding member of the NCCN, ranked among the nation's top cancer hospitals.
-      </p>
-    </section>
-  </main -->
+  <section class="page-banner">
+    <div class="container">
+      <span class="eyebrow">We're Hiring</span>
+      <h1>Build your career <span class="grad">decoding cancer</span></h1>
+      <p>Postdoctoral fellow, visiting scholar, and graduate student positions in computational &amp; cancer biology.</p>
+    </div>
+  </section>
 
   <main class="container">
-    <section class="content-section">
-        <h2>Postdoctoral Fellow, Visiting Scholar, and Graduate Student Positions - Computational & Cancer Biology</h2>
-        <h3>Join a Leading Cancer Research Institution in Los Angeles Metropolitan Area!</h3>
-
-        <p>
-            The Gu Lab at City of Hope Comprehensive Cancer Center is actively seeking highly motivated 
-             candidates to drive groundbreaking research in computational and cancer biology. Our lab, in the 
-            Department of Computational & Quantitative Medicine and Systems Biology, is at the forefront of cutting-edge 
-            cancer genomics, bioinformatics, and experimental biology.
-        </p>
-
-        <h2>🌟 Why Join Us?</h2>
-        <ul>
-            <li>🏆 <strong>at a Top-Ranked Cancer Center </strong> : City of Hope is an NCI-designated Comprehensive Cancer Center, 
-                a founding member of the NCCN, and consistently ranked among the nation’s top cancer hospitals.</li>
-            <li>🎓 <strong>Vibrant Academic Environment</strong>: Located in the Los Angeles metropolitan area, our lab is surrounded 
-                by world-class institutions such as UCLA, USC, and Caltech, fostering extensive collaborations and career opportunities.</li>
-            <li>💰 <strong>Competitive Salary & Benefits</strong>: We offer highly competitive compensation and a 
-                comprehensive benefits package.</li>
-            <li>📈 <strong>Career Development</strong>: Our trainees gain access to cutting-edge technologies, 
-                strong mentorship, and professional growth programs to prepare for independent careers.</li>
-            <li>🔬 <strong>State-of-the-Art Resources</strong>: Our lab is well-funded, equipped with powerful computing infrastructure, 
-                and has access to large-scale patient data and innovative wet-lab models for translational research.</li>
-        </ul>
-        <br>
-
-        <h2>🎯 Candidate Qualifications</h2>
-        <p>
-            We welcome applicants with training background in Bioinformatics, Computer Science, Statistics, Hematology, 
-            Cell/Molecular/Developmental Biology, Immunology, or related fields. Candidates with expertise in 
-            cancer genomics, computational biology, molecular mechanism studies, or mouse modeling are highly encouraged to apply.
-        </p>
-
-        <h2>📌 Key Responsibilities</h2>
-        <ul>
-            <li>Develop computational and analytical methods for cancer research</li>
-            <li>Conduct in vitro and in vivo modeling for leukemia and other malignancies</li>
-            <li>Analyze large-scale multi-omics bulk and single-cell data</li>
-            <li>Write manuscripts and present findings at conferences</li>
-            <li>Collaborate with leading researchers in a multidisciplinary environment</li>
-        </ul>
-        <br>
-
-        <h2>📨 How to Apply</h2>
-        <p>
-            Interested candidates should send the following to Dr. Zhaohui Gu:
-        </p>
-        <ul>
-            <li>CV</li>
-            <li>Cover Letter (describing research background & interests)</li>
-        </ul>
-        <p>
-            Email: <a href="mailto:zgu@coh.org">zgu@coh.org</a> & <a href="mailto:gzhmat@gmail.com">gzhmat@gmail.com</a>
-        </p>
-
+    <section class="content-section" data-reveal>
+      <h2>Join a leading cancer research institution in Los Angeles</h2>
+      <p>
+        The Gu Lab at City of Hope Comprehensive Cancer Center is actively seeking highly motivated
+        candidates to drive groundbreaking research in computational and cancer biology. Our lab, in the
+        Department of Systems Biology, is at the forefront of
+        cutting-edge cancer genomics, bioinformatics, and experimental biology.
+      </p>
     </section>
-</main>
 
+    <section class="content-section" data-reveal>
+      <h2>Why join us?</h2>
+      <div class="grid grid-2" style="margin-top:1.5rem">
+        <div class="card dir-card" data-tilt>
+          <div class="dir-index">01</div>
+          <h3>Top-ranked cancer center</h3>
+          <p>City of Hope is an NCI-designated Comprehensive Cancer Center, a founding member of the NCCN, and consistently ranked among the nation's top cancer hospitals.</p>
+        </div>
+        <div class="card dir-card" data-tilt>
+          <div class="dir-index">02</div>
+          <h3>Vibrant academic environment</h3>
+          <p>In the Los Angeles metro area, surrounded by world-class institutions such as UCLA, USC, and Caltech — fostering extensive collaborations and career opportunities.</p>
+        </div>
+        <div class="card dir-card" data-tilt>
+          <div class="dir-index">03</div>
+          <h3>Competitive salary &amp; benefits</h3>
+          <p>We offer highly competitive compensation and a comprehensive benefits package.</p>
+        </div>
+        <div class="card dir-card" data-tilt>
+          <div class="dir-index">04</div>
+          <h3>Career development</h3>
+          <p>Trainees gain access to cutting-edge technologies, strong mentorship, and professional growth programs to prepare for independent careers.</p>
+        </div>
+        <div class="card dir-card" data-tilt>
+          <div class="dir-index">05</div>
+          <h3>State-of-the-art resources</h3>
+          <p>Well-funded, with powerful computing infrastructure and access to large-scale patient data and innovative wet-lab models for translational research.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" data-reveal>
+      <h2>Candidate qualifications</h2>
+      <p>
+        We welcome applicants with training in Bioinformatics, Computer Science, Statistics, Hematology,
+        Cell/Molecular/Developmental Biology, Immunology, or related fields. Candidates with expertise in
+        cancer genomics, computational biology, molecular mechanism studies, or mouse modeling are highly
+        encouraged to apply.
+      </p>
+
+      <h2 style="margin-top:2rem">Key responsibilities</h2>
+      <ul>
+        <li>Develop computational and analytical methods for cancer research</li>
+        <li>Conduct in vitro and in vivo modeling for leukemia and other malignancies</li>
+        <li>Analyze large-scale multi-omics bulk and single-cell data</li>
+        <li>Write manuscripts and present findings at conferences</li>
+        <li>Collaborate with leading researchers in a multidisciplinary environment</li>
+      </ul>
+    </section>
+
+    <section class="section" style="padding-block:1rem">
+      <div class="cta-banner" data-reveal="scale">
+        <span class="eyebrow" style="justify-content:center">How to Apply</span>
+        <h2>Send us your CV &amp; cover letter</h2>
+        <p>Email a CV and a cover letter (describing your research background &amp; interests) to Dr. Zhaohui Gu &mdash; please send to <strong>both</strong> addresses below.</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+          <a href="mailto:zgu@coh.org" class="btn btn-ghost" data-magnetic>zgu@coh.org</a>
+          <a href="mailto:gzhmat@gmail.com" class="btn btn-ghost" data-magnetic>gzhmat@gmail.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="site-footer">
-    <div class="container footer-container">
-      <p>&copy; 2025 Gu Lab. All Rights Reserved.</p>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/Gu-lab-logo-small.png" alt="Gu Lab Logo" />
+        <p>Department of Systems Biology, Beckman Research Institute, City of Hope — Los Angeles, California.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="members.html">Members</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="join_us.html">Join the lab</a></li>
+          <li><a href="mailto:zgu@coh.org">zgu@coh.org</a></li>
+          <li><a href="https://gu-lab.net">gu-lab.net</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year">2025</span> Gu Lab. All Rights Reserved.</span>
+      <span>Decoding leukemia, one genome at a time.</span>
     </div>
   </footer>
+
+  <script src="js/site.js" defer></script>
 </body>
 </html>

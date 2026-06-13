@@ -2,17 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gu Lab - Ke Wang</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ke Wang — Gu Lab Alumni</title>
+  <meta name="description" content="Ke Wang, Ph.D. — former Postdoctoral Fellow (2021–2022) in the Gu Lab at City of Hope." />
+  <link rel="icon" href="../images/Gu-lab-logo-small.png" />
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
+  <div class="bg-aurora"></div>
+  <canvas id="bg-particles"></canvas>
+  <div class="bg-grid"></div>
+  <div id="scroll-progress"></div>
+
   <header class="site-header">
     <div class="header-container">
-      <a href="../index.html" class="logo">
+      <a href="../index.html" class="logo" aria-label="Gu Lab home">
         <img src="../images/Gu-lab-logo-small.png" alt="Gu Lab Logo" />
       </a>
-      <nav>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="primary-nav">
         <ul>
           <li><a href="../index.html">Home</a></li>
           <li><a href="../research.html">Research</a></li>
@@ -25,34 +35,64 @@
     </div>
   </header>
 
+  <section class="page-banner">
+    <div class="container">
+      <span class="eyebrow">Alumni</span>
+      <h1>Ke Wang, Ph.D.</h1>
+      <p>Postdoctoral Fellow (2021&ndash;2022)</p>
+    </div>
+  </section>
+
   <main class="container">
-    <section class="members-list">
+    <section class="members-list" data-reveal>
       <p class="back-link"><a href="../members.html">&larr; Back to Members</a></p>
-      <article class="member">
-        <h2>Alumni</h2>
-        <div class="member-layout">
-          <div class="member-photo oval">
-            <img src="../images/LabMember/KeWang.jpg" alt="Ke Wang">
-          </div>
-          <div class="member-details">
-            <h3>Ke Wang, Ph.D.</h3>
-            <ul>
-              <li>2021-2022: Postdoctoral Fellow, Gu Lab, Beckman Research Institute, City of Hope</li>
-              <li>2019-2021: Technologist-in-charge &amp; Assistant Researcher, Peking University People's Hospital, Peking University Institute of Hematology, Beijing, China</li>
-              <li>2014-2019: Ph.D. in Integration of Life Sciences (Clinical Medicine), Peking University, Beijing, China</li>
-              <li>2010-2013: M.S. in Immunology, Central South University, Changsha, China</li>
-              <li>2006-2010: B.S. in Biotechnology, Inner Mongolia University of Science and Technology, China</li>
-            </ul>
-          </div>
+      <article class="card member-card pi">
+        <div class="member-photo"><img src="../images/LabMember/KeWang.jpg" alt="Ke Wang" /></div>
+        <div class="member-body">
+          <h3>Ke Wang, Ph.D.</h3>
+          <div class="member-role">Postdoctoral Fellow (2021&ndash;2022)</div>
+          <ul>
+            <li>2021-2022: Postdoctoral Fellow, Gu Lab, Beckman Research Institute, City of Hope</li>
+            <li>2019-2021: Technologist-in-charge &amp; Assistant Researcher, Peking University People&rsquo;s Hospital, Peking University Institute of Hematology, Beijing, China</li>
+            <li>2014-2019: Ph.D. in Integration of Life Sciences (Clinical Medicine), Peking University, Beijing, China</li>
+            <li>2010-2013: M.S. in Immunology, Central South University, Changsha, China</li>
+            <li>2006-2010: B.S. in Biotechnology, Inner Mongolia University of Science and Technology, China</li>
+          </ul>
         </div>
       </article>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-container">
-      <p>&copy; 2025 Gu Lab. All Rights Reserved.</p>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../images/Gu-lab-logo-small.png" alt="Gu Lab Logo" />
+        <p>Department of Systems Biology, Beckman Research Institute, City of Hope — Los Angeles, California.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="../research.html">Research</a></li>
+          <li><a href="../members.html">Members</a></li>
+          <li><a href="../publications.html">Publications</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="../join_us.html">Join the lab</a></li>
+          <li><a href="mailto:zgu@coh.org">zgu@coh.org</a></li>
+          <li><a href="https://gu-lab.net">gu-lab.net</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year">2025</span> Gu Lab. All Rights Reserved.</span>
+      <span>Decoding leukemia, one genome at a time.</span>
     </div>
   </footer>
+
+  <script src="../js/site.js" defer></script>
 </body>
 </html>

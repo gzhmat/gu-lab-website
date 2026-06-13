@@ -2,17 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gu Lab - Yanan Zhu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yanan Zhu, M.D., Ph.D. — Gu Lab Alumni</title>
+  <meta name="description" content="Yanan Zhu, M.D., Ph.D. — former Visiting Scholar (2023–2026) in the Gu Lab at City of Hope." />
+  <link rel="icon" href="../images/Gu-lab-logo-small.png" />
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
+  <div class="bg-aurora"></div>
+  <canvas id="bg-particles"></canvas>
+  <div class="bg-grid"></div>
+  <div id="scroll-progress"></div>
+
   <header class="site-header">
     <div class="header-container">
-      <a href="../index.html" class="logo">
+      <a href="../index.html" class="logo" aria-label="Gu Lab home">
         <img src="../images/Gu-lab-logo-small.png" alt="Gu Lab Logo" />
       </a>
-      <nav>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="primary-nav">
         <ul>
           <li><a href="../index.html">Home</a></li>
           <li><a href="../research.html">Research</a></li>
@@ -25,34 +35,64 @@
     </div>
   </header>
 
+  <section class="page-banner">
+    <div class="container">
+      <span class="eyebrow">Alumni</span>
+      <h1>Yanan Zhu, M.D., Ph.D.</h1>
+      <p>Visiting Scholar (2023&ndash;2026)</p>
+    </div>
+  </section>
+
   <main class="container">
-    <section class="members-list">
+    <section class="members-list" data-reveal>
       <p class="back-link"><a href="../members.html">&larr; Back to Members</a></p>
-      <article class="member">
-        <h2>Alumni</h2>
-        <div class="member-layout">
-          <div class="member-photo oval">
-            <img src="../images/LabMember/YananZhu.jpg" alt="Yanan Zhu">
-          </div>
-          <div class="member-details">
-            <h3>Yanan Zhu, M.D., Ph.D.</h3>
-            <ul>
-              <li>2023-2026: Visiting Scholar, Beckman Research Institute, City of Hope</li>
-              <li>2018-Present: Attending Physician, The First Affiliated Hospital, Zhejiang University</li>
-              <li>2017-2018: Resident Physician, Renji Hospital, Shanghai Jiao Tong University</li>
-              <li>2012-2017: M.D. in Clinical Medicine, Peking Union Medical College, Beijing, China</li>
-              <li>2009-2012: B.S. in Life Sciences, Tsinghua University, Beijing, China</li>
-            </ul>
-          </div>
+      <article class="card member-card pi">
+        <div class="member-photo"><img src="../images/LabMember/YananZhu.jpg" alt="Yanan Zhu, M.D., Ph.D." /></div>
+        <div class="member-body">
+          <h3>Yanan Zhu, M.D., Ph.D.</h3>
+          <div class="member-role">Visiting Scholar (2023&ndash;2026)</div>
+          <ul>
+            <li>2023-2026: Visiting Scholar, Beckman Research Institute, City of Hope</li>
+            <li>2018-Present: Attending Physician, The First Affiliated Hospital, Zhejiang University</li>
+            <li>2017-2018: Resident Physician, Renji Hospital, Shanghai Jiao Tong University</li>
+            <li>2012-2017: M.D. in Clinical Medicine, Peking Union Medical College, Beijing, China</li>
+            <li>2009-2012: B.S. in Life Sciences, Tsinghua University, Beijing, China</li>
+          </ul>
         </div>
       </article>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-container">
-      <p>&copy; 2025 Gu Lab. All Rights Reserved.</p>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../images/Gu-lab-logo-small.png" alt="Gu Lab Logo" />
+        <p>Department of Systems Biology, Beckman Research Institute, City of Hope — Los Angeles, California.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="../research.html">Research</a></li>
+          <li><a href="../members.html">Members</a></li>
+          <li><a href="../publications.html">Publications</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="../join_us.html">Join the lab</a></li>
+          <li><a href="mailto:zgu@coh.org">zgu@coh.org</a></li>
+          <li><a href="https://gu-lab.net">gu-lab.net</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year">2025</span> Gu Lab. All Rights Reserved.</span>
+      <span>Decoding leukemia, one genome at a time.</span>
     </div>
   </footer>
+
+  <script src="../js/site.js" defer></script>
 </body>
 </html>
